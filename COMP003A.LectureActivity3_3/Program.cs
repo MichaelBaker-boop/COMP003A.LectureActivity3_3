@@ -84,6 +84,23 @@ namespace COMP003A.LectureActivity3_3
 
             }
 
+            // Prompt the user to restart the program
+            Console.Write("Enter 'restart' to try again or any other key to exit: ");
+            string restart = Console.ReadLine().ToLower();
+
+            // Check if the user wants to restart the program
+            if (restart == "restart") 
+            {
+                // Restart the program
+                goto restart;
+            }
+        // Label to restart the program
+        restart:
+            //Display a message and restart the program
+            Console.WriteLine("Restarting the program...\n");
+            //Restart the program
+            Main(args); // Restart the program
+                
 
         }   
     }
