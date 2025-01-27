@@ -45,6 +45,21 @@ namespace COMP003A.LectureActivity3_3
                 Console.Write("Enter the number to skip:");
                 skipNumber = int.Parse(Console.ReadLine());
             }
+
+            // Get the user's preference for terminating the loop
+            Console.Write("Would you like to terminate the loop at a specific number? (yes/no): ");
+            // Convert to make response case-insensitive
+            string terminateResponse = Console.ReadLine().ToLower();
+            // Check if user wants to terminate loop
+            if (terminateResponse == "yes")
+            {
+                // Prompt user to enter the termination number
+                Console.Write("Enter the termination number: ");
+                // Parse the input to an integer
+                terminateNumber = int.Parse(Console.ReadLine());
+            }
+
+
         }   
     }
 }
