@@ -50,6 +50,8 @@ namespace COMP003A.LectureActivity3_3
             Console.Write("Would you like to terminate the loop at a specific number? (yes/no): ");
             // Convert to make response case-insensitive
             string terminateResponse = Console.ReadLine().ToLower();
+            // Initialize the termination number to zero
+            int terminateNumber = 0;
             // Check if user wants to terminate loop
             if (terminateResponse == "yes")
             {
@@ -57,6 +59,29 @@ namespace COMP003A.LectureActivity3_3
                 Console.Write("Enter the termination number: ");
                 // Parse the input to an integer
                 terminateNumber = int.Parse(Console.ReadLine());
+            }
+
+            // Display the output
+            Console.WriteLine("\nOutput:");
+            // Iterate through the range of numbers
+            for (int i = 1; i <= range; i++) 
+            {
+                // Check if current number is the number to skip
+                if (i == skipNumber) 
+                {
+                    continue; // Skip the specified number
+                }
+                // Check if current number is the number to terminate
+                if (i == terminateNumber)
+                {
+                    //Display a message and break out of the loop
+                    Console.WriteLine($"Loop terminated at number {terminateNumber}");
+                    break; // Terminate the loop
+                }
+
+                // Display the current number
+                Console.WriteLine(i);
+
             }
 
 
