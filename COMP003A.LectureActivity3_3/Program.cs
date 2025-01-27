@@ -18,7 +18,7 @@ namespace COMP003A.LectureActivity3_3
                 try
                 {
                     //Prompt user to enter a positive integer
-                    Console.Write("Enter a positive integer to iterate through");
+                    Console.Write("Enter a positive integer to iterate through: ");
                     //Parse the input to an integer
                     range = int.Parse(Console.ReadLine());
                     // Check if the number is positive
@@ -29,11 +29,11 @@ namespace COMP003A.LectureActivity3_3
                 catch (Exception ex)
                 {
                     // Display an error message and prompt the user to try again
-                    Console.WriteLine($"Invalid input: (ex.Message\nPlease try again.\n");
+                    Console.WriteLine($"Invalid input: (ex.Message)\nPlease try again.\n");
                 }
             }
             // Get the user's preferences for skipping and terminating the loop
-            Console.Write("Would you like to skip a number? (yes/no)");
+            Console.Write("Would you like to skip a number? (yes/no): ");
             // Convert the response to lowercase to make it case-insensitive
             string skipResponse = Console.ReadLine().ToLower();
             // Initialize the skip number to zero
@@ -42,7 +42,7 @@ namespace COMP003A.LectureActivity3_3
             if (skipResponse == "yes") 
             {
                 // Prompt user to enter the skipped number
-                Console.Write("Enter the number to skip:");
+                Console.Write("Enter the number to skip: ");
                 skipNumber = int.Parse(Console.ReadLine());
             }
 
